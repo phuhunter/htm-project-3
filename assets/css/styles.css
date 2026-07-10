@@ -13,9 +13,87 @@ a {
 }
 /* -----------COMMON CSSS------------ */
 .content {
-    width: min(1170px, calc(100vw-48px));
+    width: min(1170px, calc(100vw - 48px));
     margin-left: auto;
     margin-right: auto;
+    /* background-color: red; */
 }
 .btn {
+    border-radius: 30px;
+    background: #2e80ce;
+    padding: 15px 50px;
+}
+.header {
+    background-color: #10375c;
+    padding-top: 38px;
+}
+.header__inner {
+    display: flex;
+    align-items: center;
+}
+.logo__text--main {
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 14px; /* 77.778% */
+}
+.logo__text {
+    display: inline-block;
+}
+.logo__text--submain {
+    color: #fff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 14px;
+    display: block;
+    text-align: right;
+}
+.header__menu {
+    margin-left: auto;
+}
+.header__actions {
+    margin-left: 222px;
+}
+.menu__list {
+    display: flex;
+    gap: 0 42px;
+}
+.menu__link {
+    color: #c9d2da;
+    text-align: center;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28px; /* 175% */
+}
+.menu__link--active {
+    color: #fff;
+    text-align: center;
+    font-style: normal;
+    line-height: 28px; /* 175% */
+}
+.menu__link--active::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 11px;
+}
+.header__login {
+    color: #c9d2da;
+    text-align: right;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28px; /* 175% */
+}
+.header__signup {
+    color: #fff;
+    text-align: center;
+    font-style: normal;
+    line-height: 28px; /* 175% */
+    border-radius: 22px;
+    padding: 8px 20px;
+    margin-left: 48px;
 }
