@@ -24,7 +24,7 @@ a {
     padding: 15px 50px;
     min-width: 205px;
     height: 60px;
-    display: inline-block;
+    /* display: inline-block; */
     color: #fff;
     display: inline-flex;
     align-items: center;
@@ -391,4 +391,83 @@ a {
 }
 .smiles__link {
     margin-top: 38px;
+}
+/* --------------DENTIST-------------- */
+.dentist {
+    margin-top: 170px;
+}
+.dentist__title {
+    color: #10375c;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 60px; /* 120% */
+    letter-spacing: -1px;
+}
+.dentist__link {
+    margin-top: 38px;
+    text-align: center;
+}
+.dentist__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 34px;
+}
+.dentist__card {
+    width: 270px;
+    height: 384px;
+    margin-top: 70px;
+}
+.dentist__thumb {
+    background: #eaf6ff;
+    padding-top: 28px;
+    border-radius: 6px;
+}
+.dentist__img {
+    width: 262px;
+    height: 290px;
+    object-fit: cover;
+}
+.dentist__card:last-child .dentist__img {
+    width: 253px;
+}
+.dentist__name {
+    color: #10375c;
+    text-align: center;
+    line-height: 28px; /* 175% */
+    display: block;
+    margin-top: 12px;
+}
+.dentist__role {
+    color: #575f66;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 26px;
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+}
+.dentist__pagination {
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 18px;
+}
+.dentist__pagination-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #2e80ce;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dentist__pagination-link:first-child {
+    border-radius: 36px;
+    border: 1px solid #575f66;
+    background: #fff;
 }
