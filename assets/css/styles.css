@@ -38,6 +38,10 @@ button {
 .header {
     background-color: #10375c;
     padding-top: 38px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding-bottom: 20px;
 }
 .header__inner {
     display: flex;
@@ -724,7 +728,6 @@ button {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    /* display: inline-block; */
     background-color: #fff;
     display: flex;
     align-items: center;
