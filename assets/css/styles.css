@@ -33,11 +33,14 @@ button {
     align-items: center;
     justify-content: center;
 }
+.btn:hover {
+    opacity: 0.9;
+}
 
 /* -----------HEADER------------ */
 .header {
     background-color: #10375c;
-    padding-top: 38px;
+    padding-top: 30px;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -80,6 +83,9 @@ button {
     font-weight: 300;
     line-height: 28px; /* 175% */
 }
+.menu__link:hover {
+    color: #fff;
+}
 .menu__link--active {
     color: #fff;
     text-align: center;
@@ -102,15 +108,15 @@ button {
 }
 .header__login {
     color: #c9d2da;
-    text-align: right;
-    font-style: normal;
+    /* text-align: right; */
+    /* font-style: normal; */
     font-weight: 300;
     line-height: 28px; /* 175% */
 }
 .header__signup {
     color: #fff;
-    text-align: center;
-    line-height: 28px; /* 175% */
+    /* text-align: center; */
+    line-height: 28px;
     border-radius: 22px;
     padding: 8px 20px;
     margin-left: 48px;
@@ -157,7 +163,6 @@ button {
     justify-content: center;
     color: #fff;
     font-size: 18px;
-    font-style: normal;
     line-height: 30px; /* 166.667% */
 }
 .hero__phone,
@@ -171,6 +176,7 @@ button {
     position: relative;
     height: 540px;
     /* margin-left: 113px; */
+    /* overflow: hidden; */
 }
 .hero__img {
     object-fit: cover;
@@ -209,7 +215,6 @@ button {
 .service__desc {
     color: #575f66;
     text-align: center;
-    font-style: normal;
     font-size: 18px;
     font-weight: 300;
     line-height: 30px;
@@ -235,6 +240,7 @@ button {
 .servive__item {
     display: flex;
     align-items: center;
+    padding: 20px;
 }
 .servive__item + .servive__item {
     margin-top: 21px;
@@ -243,7 +249,6 @@ button {
     border-radius: 10px;
     background: #fff;
     box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.05);
-    padding: 20px;
 }
 .service__icon {
     width: 60px;
@@ -425,19 +430,26 @@ button {
     height: 384px;
     margin-top: 70px;
 }
+.dentist__card:hover .dentist__img {
+    transform: scale(1.1);
+}
 .dentist__thumb {
     background: #eaf6ff;
     padding-top: 28px;
     border-radius: 6px;
+    overflow: hidden; /* khi hover vào ảnh ko bị ra ngoài*/
 }
 .dentist__img {
-    width: 262px;
+    /* width: 262px; */
+    max-width: 100%;
     height: 290px;
     object-fit: cover;
+    display: block; /* để làm mất phần khoảng trắng ở dưới ảnh*/
+    transition: 0.25s;
 }
-.dentist__card:last-child .dentist__img {
+/* .dentist__card:last-child .dentist__img {
     width: 253px;
-}
+} */
 .dentist__name {
     color: #10375c;
     text-align: center;
@@ -526,17 +538,20 @@ button {
 }
 .app__download {
     margin-top: 38px;
+    display: flex;
+    gap: 0 28px;
 }
 .app__link {
-    margin-right: 28px;
+    /* margin-right: 28px; */
 }
 /* -----------LATEST NEWS----------- */
 .news {
     margin-top: 170px;
 }
 .news__inner {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    /* display: grid;
+    grid-template-columns: 1fr 1.2fr; */
+    display: flex;
     align-items: center;
 }
 .news__title {
@@ -589,16 +604,35 @@ button {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 30px;
+    margin-left: 130px;
 }
-.news.card {
+.news__card {
     width: 270px;
     height: 375px;
+    border-radius: 12px;
+    border: 1px solid #e8ebee;
+    background: #fff;
+    transition: 0.25s;
+    overflow: hidden;
+}
+.news__card:hover {
+    box-shadow: 0 18px 50px 0 rgba(0, 0, 0, 0.05);
+    border-color: transparent;
+    /* transform: translateY(-8px); */
+}
+.news__card:hover .news__img {
+    transform: scale(1.1);
+}
+.news__media {
+    overflow: hidden;
+    height: 172px;
 }
 .news__img {
     width: 100%;
-    height: 172px;
+    height: 100%;
     object-fit: cover;
-    border-radius: 12px 12px 0 0;
+    transition: 0.25s;
+    /* border-radius: 12px 12px 0 0; */
 }
 .news__body {
     padding: 18px 0px 22px 21px;
@@ -698,6 +732,9 @@ button {
     font-size: 14px;
     line-height: 26px;
 }
+.footer__link:hover {
+    text-decoration: underline;
+}
 .footer__item {
     margin-top: 20px;
 }
@@ -748,7 +785,6 @@ button {
     outline: none;
     border-radius: 4px;
     border: 1px solid #406181;
-
     padding: 10px;
 }
 .footer__inner::placeholder {
