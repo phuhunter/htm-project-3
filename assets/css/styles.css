@@ -245,10 +245,25 @@ button {
 .servive__item + .servive__item {
     margin-top: 21px;
 }
-.servive__item--active {
+/* .servive__item--active {
     border-radius: 10px;
     background: #fff;
     box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.05);
+} */
+.servive__item:hover {
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.05);
+}
+.service__img {
+    color: #10375c;
+    transition: color 0.2s;
+}
+.servive__item:hover .service__img {
+    color: white;
+}
+.servive__item:hover .service__icon {
+    background-color: #2e80ce;
 }
 .service__icon {
     width: 60px;
@@ -258,10 +273,11 @@ button {
     align-items: center;
     justify-content: center;
     background-color: #eff6fd;
+    transition: background-color 0.25s;
 }
-.service__icon--active {
+/* .service__icon--active {
     background-color: #2e80ce;
-}
+} */
 .service__item-info {
     margin-left: 19px;
 }
@@ -320,11 +336,18 @@ button {
     padding: 43px 75px 43px 42px;
     border-radius: 4px;
     border: 16px solid #eaf6ff;
+    transition:
+        border 0.25s,
+        transform 0.25s;
 }
-.works__item--active {
+/* .works__item--active {
     border: 16px solid #2e80ce;
     position: relative;
     top: -16px;
+} */
+.works__item:hover {
+    border: 16px solid #2e80ce;
+    transform: translateY(-16px);
 }
 .works__item-title {
     color: #10375c;
